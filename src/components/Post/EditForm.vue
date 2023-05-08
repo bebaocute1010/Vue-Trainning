@@ -38,7 +38,7 @@
 
               <v-col cols="6" v-if="file || url_image">
                 <v-card hover>
-                  <v-img :src="file || url_image"/>
+                  <v-img class="image-preview" :src="file || url_image"/>
                 </v-card>
               </v-col>
             </v-row>
@@ -132,5 +132,7 @@ export default {
 </script>
 
 <style scoped>
+.image-preview {
 
+}
 </style>

@@ -93,7 +93,14 @@ export default {
       this.$emit('onHidden')
     },
     handleSubmit() {
-      axios.post('/admin/updateUser', this.user)
+      var role = this.user.role === 'Admin' ? 0 : 1
+      const data = {
+        id: this.user.id,
+        name: this.user.name,
+        email: this.user.email,
+        role: role
+      };
+      axios.post('/admin/update-user', data)
         .then(response => {
           this.$emit('success', true, response.data.message)
           this.show = false;

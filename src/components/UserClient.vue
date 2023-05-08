@@ -181,6 +181,7 @@ a {
   background-size: cover;
   width: 100%;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .blog-item {
   opacity: 0.9;
